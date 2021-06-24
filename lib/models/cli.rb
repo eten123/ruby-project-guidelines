@@ -25,23 +25,26 @@ class CommandLine
 
     
     def welcome_user
-        puts "Welcome to Movie Selector. "
+        puts "Welcome to Movie Selector.\n"
+        puts "\n"
+    
     end
 
     def get_input
-    puts "Please select the movie you would like to learn more about?"
+    puts "Please write the movie you would like to learn more about from the list of options?"
     list_movies
      input = gets.chomp
-     binding.pry
+     #binding.pry
      return input
     end
 
     def list_movies
         puts <<-DOC.gsub /^\s*/, ''
-        1.Harry Potter
-        2.Game of Thrones
-        3. Forest Gump
-        4.Suicide Squad
+        Harry Potter
+        Game of Thrones
+        Forest Gump
+        Suicide Squad
+        --------------
         DOC
     end
 
@@ -59,7 +62,7 @@ class CommandLine
         puts "Below is more information about the movie selected" 
         movie_object = Movie.find_movie_by_movie_title(option)
         movie_object.return_actors
-        binding.pry
+        #binding.pry
     end
 
 
