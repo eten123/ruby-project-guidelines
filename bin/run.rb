@@ -1,5 +1,6 @@
 require_relative '../config/environment'
 
+cli = CommandLine.new
+cli.run
 
-
-puts "HELLO WORLD"
+#prompt = TTY::Prompt.new
