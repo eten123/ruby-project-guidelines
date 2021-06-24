@@ -20,4 +20,5 @@ suicide_squad = Movie.create(movie_name: "Suicide Squad")
 
 #actor data
 harry_potter_role = Role.create(leading_role: "Hermonie Granger", actor_id: Actor.first.id, movie_id: Movie.first.id)
+game_of_thrones_role = Role.create(leading_role: "Kit Harington", actor_id: Actor.kit_harington.id, movie_id: Movie.kit_harington.id)
 # do this for remainder of roles

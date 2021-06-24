@@ -51,18 +51,23 @@ class CommandLine
     def choose_option(option)
         case option
         when "Harry Potter"
-            puts "Harry Potter selected" 
+            puts "Below is more information about the movie selected\n" 
         when "Game of Thrones"
-            puts "Game of Thrones selected" 
+            puts "Below is more information about the movie selected\n" 
         when "Forest Gump"
-            puts "Forest Gump selected" 
+            puts "Below is more information about the movie selected\n" 
         when "Suicide Squad"
-            puts "Suicide Squad selected" 
+            puts "Below is more information about the movie selected\n" 
         end
-        puts "Below is more information about the movie selected" 
-        movie_object = Movie.find_movie_by_movie_title(option)
-        movie_object.return_actors
+       
         #binding.pry
+        movie_object = Movie.find_movie_by_movie_title(option)
+        #binding.pry
+        movie_object.return_actors
+        movie_object.actors
+        binding.pry
+        puts "Leading Actor Name: #{movie_object.actors.first.actor_name}"  
+        puts "Salary: #{movie_object.actors.first.salary}"
     end
 
 
@@ -70,7 +75,6 @@ class CommandLine
         puts "Thanks for stopping by Movie Selector. See you later!"
     end
     
-
 
 end
 
