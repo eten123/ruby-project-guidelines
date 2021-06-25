@@ -29,6 +29,7 @@ class CommandLine
         end
         should_salary_update?
 
+        
     end
 
     
@@ -89,12 +90,18 @@ class CommandLine
     end
     end
 
-    # def update_actor_salary
-    #     puts "Great what should we set as the actors new salary?"
-    #     update = gets.chomp.to_i
-    #     actor_object = Actor.find_by_salary
-    #     actor_object = 
+    # def create_review()
+    #     puts "Would you like to create a review? Type yes or no.\n"
+    #     choice = gets.chomp.downcase
+    #     if choice == "yes"
+    #         review_text = gets.chomp
+    #         puts "Please enter a rating between 1 to 10. \n"
+    #         review_rating = gets.chomp
+    #         new_review = Review.create(movie_id: Movie.id.sample, rating: review_rating.to_i, text: review_text)
+    #     end
     # end
+
+
 
     def end_program
         puts "Thanks for stopping by Movie Selector. See you later!"

@@ -57,3 +57,19 @@ Projects need to be approved prior to launching into them, so take some time to 
 # in config/environment.rb add this line:
 ActiveRecord::Base.logger = nil
 ```
+## Instructions
+
+1. The user should run the code by typing in ruby bin/run.rb
+2. The user will be prompted with a question. They should read the question and write the appropiate response in the file below
+3. The user will be prompted with another question and they are able to respond to this question in a timely manner. 
+4. The user should have the following gems installed.
+source "https://rubygems.org"
+
+gem "sinatra-activerecord"
+gem "sqlite3"
+gem "pry"
+
+gem "require_all"
+gem "activerecord"
+gem "rake"
+gem "tty-prompt" #change menu for aestheic purposes

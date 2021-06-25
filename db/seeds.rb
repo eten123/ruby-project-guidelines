@@ -1,4 +1,4 @@
-#we use this to have dummy objects or data to test our code by re running seeds
+#we use this to have dummy objects or data to test our code by re-running seeds
 puts "Delete Role"
 Role.destroy_all
 
