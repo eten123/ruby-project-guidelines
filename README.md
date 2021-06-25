@@ -15,8 +15,7 @@ gem "activerecord"
 gem "rake"
 gem "tty-prompt" #change menu for aestheic purposes
 
-
-
+—————————————————————————————————————————————————————————————_
 
 ## Module One Final Project Guidelines
 
