@@ -1,5 +1,3 @@
-
-#so basically I am supposed to require something because command line is a constant and can't be seen
 require "pry"
 class CommandLine
 
@@ -12,15 +10,24 @@ class CommandLine
         
         #Menu: Takes input and returns something
         user_input = get_input
-        if user_input
+        #binding.pry
+        
+        if user_input == "Forest Gump"
             choose_option(user_input)
-        elsif user_input == 'exit'
-        end_program 
-
+        elsif user_input == "Game of Thrones"
+            choose_option(user_input)
+        elsif user_input == "Suicide Squad"
+            choose_option(user_input)
+        elsif user_input == "Harry Potter"
+            choose_option(user_input)
+        elsif user_input == "exit"
+            end_program 
         else
-            puts "Incorrect choice. Try again"
+            puts "\n"
+            puts "Invalid Response. Run Again"
             run
         end
+        should_salary_update?
 
     end
 
@@ -32,15 +39,16 @@ class CommandLine
     end
 
     def get_input
-    puts "Please write the movie you would like to learn more about from the list of options?"
+    puts "Write the movie you whant learn more about from the list of options?"
+    puts "Want to leave? Simply type exit."
     list_movies
-     input = gets.chomp
-     #binding.pry
+    input = gets.chomp
      return input
     end
 
     def list_movies
         puts <<-DOC.gsub /^\s*/, ''
+        --------------
         Harry Potter
         Game of Thrones
         Forest Gump
@@ -50,30 +58,48 @@ class CommandLine
     end
 
     def choose_option(option)
-        case option
-        when "Harry Potter"
-            puts "Harry Potter selected" 
-        when "Game of Thrones"
-            puts "Game of Thrones selected" 
-        when "Forest Gump"
-            puts "Forest Gump selected" 
-        when "Suicide Squad"
-            puts "Suicide Squad selected" 
-        end
-        puts "Below is more information about the movie selected" 
+        1.times {puts "\n"}
+        puts "Below is more information about the movie selected." 
+        1.times {puts "\n"}
         movie_object = Movie.find_movie_by_movie_title(option)
         movie_object.return_actors
         puts "Leading Actor Name: #{movie_object.actors.first.actor_name}"  
-        puts "Leading Actor Salary: #{movie_object.actors.first.salary}"
+        puts "Leading Actor Salary: $#{movie_object.actors.first.salary}"
         1.times {puts "\n"}
         #binding.pry
     end
 
+   def should_salary_update?
+    puts "Do you think the selected actor should be payed another salary? Type yes or no."
+    puts "\n"
+    salary_input = gets.chomp.downcase
+    if salary_input =="yes"
+        puts "\n"
+        puts "Please input desired salary."
+        puts "\n"
+        puts  "Great! The actor's salary is $#{gets.chomp} for their role in the movie."
+        #update_actor_salary
+        end_program
+    end
+    if salary_input == "no"
+    puts "\n"
+    puts "Ok thats fine."
+    puts "\n"
+    end_program
+    end
+    end
+
+    # def update_actor_salary
+    #     puts "Great what should we set as the actors new salary?"
+    #     update = gets.chomp.to_i
+    #     actor_object = Actor.find_by_salary
+    #     actor_object = 
+    # end
 
     def end_program
         puts "Thanks for stopping by Movie Selector. See you later!"
     end
-    
 
+    
 
 end
