@@ -40,7 +40,7 @@ class CommandLine
     end
 
     def get_input
-    puts "Write the movie you whant learn more about from the list of options?"
+    puts "Write the movie you want learn more about from the list of options?"
     puts "Want to leave? Simply type exit."
     list_movies
     input = gets.chomp
