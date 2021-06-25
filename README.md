@@ -1,12 +1,32 @@
-# Module One Final Project Guidelines
+# Instructions
+
+1. The user should run the code by typing in ruby bin/run.rb
+2. The user will be prompted with a question. They should read the question and write the appropiate response in the file below
+3. The user will be prompted with another question and they are able to respond to this question in a timely manner. 
+4. The user should have the following gems installed.
+source "https://rubygems.org"
+
+gem "sinatra-activerecord"
+gem "sqlite3"
+gem "pry"
+
+gem "require_all"
+gem "activerecord"
+gem "rake"
+gem "tty-prompt" #change menu for aestheic purposes
+
+
+
+
+## Module One Final Project Guidelines
 
 Congratulations, you're at the end of module one! You've worked crazy hard to get here and have learned a ton.
 
 For your final project, we'll be building a Command Line database application.
 
-## Project Requirements
+### Project Requirements
 
-### Option One - Data Analytics Project
+#### Option One - Data Analytics Project
 
 1. Access a Sqlite3 Database using ActiveRecord.
 2. You should have at minimum three models including one join model. This means you must have a many-to-many relationship.
@@ -17,7 +37,7 @@ For your final project, we'll be building a Command Line database application.
 
   **Resource:** [Easy Access APIs](https://github.com/learn-co-curriculum/easy-access-apis)
 
-### Option Two - Command Line CRUD App
+#### Option Two - Command Line CRUD App
 
 1. Access a Sqlite3 Database using ActiveRecord.
 2. You should have a minimum of three models.
@@ -33,7 +53,7 @@ Projects need to be approved prior to launching into them, so take some time to 
 * As a user, I should be able to reject a suggestion and not see that restaurant suggestion again
 * As a user, I want to be able to save to and retrieve a list of favorite restaurant suggestions
 
-## Instructions
+### Instructions
 
 1. Fork and clone this repository.
 2. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable.
@@ -51,25 +71,9 @@ Projects need to be approved prior to launching into them, so take some time to 
 7. *OPTIONAL, BUT RECOMMENDED*: Write a blog post about the project and process.
 
 ---
-### Common Questions:
+#### Common Questions:
 - How do I turn off my SQL logger?
 ```ruby
 # in config/environment.rb add this line:
 ActiveRecord::Base.logger = nil
 ```
-## Instructions
-
-1. The user should run the code by typing in ruby bin/run.rb
-2. The user will be prompted with a question. They should read the question and write the appropiate response in the file below
-3. The user will be prompted with another question and they are able to respond to this question in a timely manner. 
-4. The user should have the following gems installed.
-source "https://rubygems.org"
-
-gem "sinatra-activerecord"
-gem "sqlite3"
-gem "pry"
-
-gem "require_all"
-gem "activerecord"
-gem "rake"
-gem "tty-prompt" #change menu for aestheic purposes
