@@ -1,3 +1,4 @@
+
 #so basically I am supposed to require something because command line is a constant and can't be seen
 require "pry"
 class CommandLine
@@ -62,6 +63,9 @@ class CommandLine
         puts "Below is more information about the movie selected" 
         movie_object = Movie.find_movie_by_movie_title(option)
         movie_object.return_actors
+        puts "Leading Actor Name: #{movie_object.actors.first.actor_name}"  
+        puts "Leading Actor Salary: #{movie_object.actors.first.salary}"
+        1.times {puts "\n"}
         #binding.pry
     end
 
@@ -73,4 +77,3 @@ class CommandLine
 
 
 end
-

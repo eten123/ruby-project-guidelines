@@ -8,3 +8,4 @@ gem "pry"
 gem "require_all"
 gem "activerecord"
 gem "rake"
+gem "tty-prompt" #change menue for aestheic purposes
